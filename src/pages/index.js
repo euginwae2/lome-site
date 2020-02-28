@@ -1,21 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import HeadLine from "../components/head-line"
+import Industries from "../components/industries"
+import ValueProp from "../components/value-prop"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container'
+import HeadNav from '../components/head-nav'
+import CallToAction from '../components/call-to-action'
+import Pricing from '../components/pricing'
 
 const IndexPage = () => (
-  <Layout>
+  <Container>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <HeadNav/>
+    <HeadLine/>
+    <Industries/>
+    <ValueProp/>
+    <CallToAction/>
+    <Pricing/>
+    <footer>
+          © Lome
+          {` `}
+          <a href="https://www.gatsbyjs.org">Privacy & Terms</a>
+          {` `}
+          USA
+    </footer>
+  </Container>
 )
 
 export default IndexPage
